@@ -1,6 +1,6 @@
 // 구글 시트 웹 앱 URL (Apps Script 배포 후 여기에 URL을 입력하세요)
 // 이 URL은 Google Apps Script에서 "웹 앱으로 배포" 후 받은 URL입니다
-const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyLEuw7acQZGvU6IwMJEXGsipW-OROeCG8CismSBsFO-NxcIkikf472iOejf-qEIxRg7w/exec';
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyBhBSRYBSt8jSE9N_T9rMvoiple6Mm6ABwPIBdsAdeb398W6YAZHchtdlecrPja_nXfw/exec';
 
 // FAQ 토글
 function toggleFaq(index) {
