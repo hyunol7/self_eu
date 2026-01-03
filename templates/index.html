@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>자체사업주 · 기업 전용 환급교육</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- NAV -->
+    <header class="nav">
+      <div class="wrap nav-in">
+        <div class="brand">
+          <a href="#top" class="logo-link">
+            <img src="{{ url_for('static', filename='image/HRDKorea.png') }}" alt="HRD코리아" class="logo-image">
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="#top" class="nav-link">홈</a>
+          <a href="#what-is" class="nav-link">자체사업주 교육</a>
+          <a href="#features" class="nav-link">자체사업주란?</a>
+          <a href="#process" class="nav-link">운영 방식</a>
+          <a href="#faq" class="nav-link">자주 묻는 질문</a>
+          <a href="#question" class="nav-link">상담신청</a>
+        </nav>
+      </div>
+    </header>
+  
+    <!-- HERO -->
+    <main>
+      <section class="hero" id="top">
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
+  
+        <div class="wrap">
+          <div class="hero-slogan-container">
+            <div class="big-p">흩어진 교육 관리, <br>한 페이지로 끝내세요</div>
+            <p class="hero-description">기업 전용 교육홈페이지를 구축하고, 원하는 교육 30차시까지 "전부" 넣어드립니다.</p>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- WHAT IS -->
+      <section class="section" id="what-is">
+        <div class="wrap">
+          <h2 class="title">왜 HRD코리아일까?</h2>
+          <p class="desc">
+            국내 2곳의 자체사업주 교육 전문기관 중 하나입니다.
+          </p>
+
+          <div class="stats" aria-label="핵심 지표">
+            <div class="stats-in">
+              <div class="stat fade-in-up" data-delay="0">
+                <div class="n">산업안전보건교육 </div>
+              </div>
+              <div class="stat fade-in-up" data-delay="100">
+                <div class="n">관리감독자교육</div>
+              </div>
+              <div class="stat fade-in-up" data-delay="200">
+                <div class="n">법정교육 </div>
+              </div>
+              <div class="stat fade-in-up" data-delay="300">
+                <div class="n">무료로<br> 들을 수 있습니다.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="section" id="features">
+        <div class="wrap">
+          <h2 class="title">자체사업주란? </h2>
+          <p class="desc">
+            사업주가 직접 훈련계획을 수립, 훈련실시, 훈련생 관리 등을 수행하는<br>
+            직업능력개발훈련(자체훈련)을 실시하는 것을 의미합니다.
+          </p>
+  
+          <div class="grid-3">
+            <div class="card fade-in-up" data-delay="0">
+              <div class="badge">전용 홈페이지</div>
+              <h3>회사 전용 포털 구축</h3>
+              <p>
+                회사 도메인/브랜딩 느낌으로 <br>교육홈페이지를 제작합니다.<br>
+                운영·관리자는 <b>교육 담당자</b>로 설정해 <br>내부에서 자율 관리가 가능합니다.
+              </p>
+            </div>
+            <div class="card fade-in-up" data-delay="100">
+              <div class="badge">콘텐츠 맞춤 제작</div>
+              <h3 class="mobile-indent">강의 30차시 + 시험 1차시</h3>
+              <p>
+                AI·ESG·인권·개인정보·직무 등<br> 필요 주제를 말씀주시면
+                <b>회사 맞춤형</b>으로 제작해 30차시를 탑재합니다.
+              </p>
+            </div>
+            <div class="card fade-in-up" data-delay="200">
+              <div class="badge">페이지 통합</div>
+              <h3>모든 교육을 한 화면에서</h3>
+              <p>
+                모든 교육을 한 페이지에서 운영합니다.<br>
+                <b>집체/Zoom</b> 과정은 <br>일정에 맞춰 별도 진행합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- PROCESS -->
+      <section class="section" id="process">
+        <div class="wrap">
+          <h2 class="title">참여절차</h2>
+          <p class="desc">
+            신청부터 훈련 진행까지 단계별로 안내해드립니다.
+          </p>
+  
+          <div class="process-container">
+            <div class="process-top-row">
+              <div class="step-small fade-in-up" data-delay="0">
+                <div class="top">
+                  <div class="num">1</div>
+                  <b>신청서 작성</b>
+                </div>
+                <ul>
+                  <li>기업 정보 및 교육 희망 주제 입력</li>
+                  <li>참여 인원 및 교육 일정 확인</li>
+                  <li>담당자 연락처 및 이메일 등록</li>
+                </ul>
+              </div>
+
+              <div class="process-arrow-inline">
+                <svg width="30" height="20" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 20L55 20M55 20L40 5M55 20L40 35" stroke="#0052a3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <div class="step-small fade-in-up" data-delay="100">
+                <div class="top">
+                  <div class="num">2</div>
+                  <b>미팅 진행</b>
+                </div>
+                <ul>
+                  <li>교육 컨설턴트와 미팅 일정 조율</li>
+                  <li>맞춤 교육 구성 및 운영 방식 논의</li>
+                  <li>전용 홈페이지 구축 방향 확인</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="process-bottom-row">
+              <div class="step-small fade-in-up" data-delay="200">
+                <div class="top">
+                  <div class="num">3</div>
+                  <b>필요서류 안내 및 작성</b>
+                </div>
+                <ul>
+                  <li>환급 신청에 필요한 서류 안내</li>
+                  <li>기업 인증 및 지원 자격 확인 서류</li>
+                  <li>교육 계획서 및 참여자 명단 작성</li>
+                </ul>
+              </div>
+
+              <div class="process-arrow-inline">
+                <svg width="30" height="20" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 20L55 20M55 20L40 5M55 20L40 35" stroke="#0052a3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <div class="step-small fade-in-up" data-delay="300">
+                <div class="top">
+                  <div class="num">4</div>
+                  <b>심사</b>
+                </div>
+                <ul>
+                  <li>제출 서류 검토 및 심사 진행</li>
+                  <li>우선지원기업 및 지원한도 확인</li>
+                  <li>교육 과정 승인 및 최종 확정</li>
+                </ul>
+              </div>
+
+              <div class="process-arrow-inline">
+                <svg width="30" height="20" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 20L55 20M55 20L40 5M55 20L40 35" stroke="#0052a3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <div class="step-small fade-in-up" data-delay="400">
+                <div class="top">
+                  <div class="num">5</div>
+                  <b>훈련진행</b>
+                </div>
+                <ul>
+                  <li>전용 홈페이지 전달 후 교육 진행</li>
+                  <li>교육 배정 및 수강 안내</li>
+                  <li>수료율 확인 후 환급/정산 진행</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- FREE -->
+      <section class="section" id="free">
+        <div class="wrap">
+          <h2 class="title">지원대상인지 확인하는 방법</h2>
+          <p class="desc">
+            상담 문의시 우선지원기업 여부와 지원한도를 작성해서 보내주세요.
+          </p>
+
+          <div class="check-cards">
+            <div class="check-card fade-in-up" data-delay="0">
+              <h3>우선지원기업 확인 방법</h3>
+              <p class="check-desc">
+                기업이 우선지원기업 여부는 <b>고용24<b> 에서 확인할 수 있습니다.
+              </p>
+              <ul class="check-list">
+                <li><a href="https://www.work24.go.kr/" target="_blank" class="hrd-link">고용 24 홈페이지 접속 (https://www.work24.go.kr/)</a></li>
+                <li>기업회원 로그인 후 "기업정보" 메뉴에서 확인</li>
+                <li>"우선지원기업 여부" 항목에서 확인 가능</li>
+                <li>우선지원기업의 경우 지원한도가 더 높게 설정됩니다</li>
+              </ul>
+            </div>
+            
+            <div class="check-card fade-in-up" data-delay="100">
+              <h3>지원한도 조회 방법</h3>
+              <p class="check-desc">
+                기업의 지원한도는 <b>고용 24 홈페이지</b>에서 조회할 수 있습니다.
+              </p>
+              <ul class="check-list">
+                <li><a href="https://www.work24.go.kr/" target="_blank" class="hrd-link">고용 24 홈페이지 접속 (https://www.work24.go.kr/)</a></li>
+                <li>기업회원 로그인 후 "지원한도 조회" 메뉴 선택</li>
+                <li>연도별 지원한도 및 사용 내역 확인 가능</li>
+                <li>잔여한도 확인 후 교육 신청 가능 여부 판단</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <div class="wrap">
+          <div class="kicker">FAQ</div>
+          <h2 class="title">자주 묻는 질문</h2>
+          <p class="desc">담당자분들이 실제로 가장 많이 물어보시는 포인트만 추려두었습니다.</p>
+  
+          <div class="faq">
+            <details open>
+              <summary>
+                정말 기업 비용이 0원인가요?
+                <span>+</span>
+              </summary>
+              <div class="ans">
+                네, 기본 방향은 <b>기업 실부담 0원(무료)</b>입니다.<br>
+                다만 환급/정산은 참여 인원, 수료율 등 요건 충족이 필요하며,
+                기업 상황에 따라 운영/정산 방식은 상담 시 정확히 안내드립니다.
+              </div>
+            </details>
+  
+            <details>
+              <summary>
+                홈페이지 구축 비용은 따로 지불하나요?
+                <span>+</span>
+              </summary>
+              <div class="ans">
+                모든 수료를 마쳤을 경우 환급되는 비용을 <br>교육원에게 납부를 하시면 됩니다.<br>
+                이 비용은 기업에서 내는 비용이 아닌 정부에서 지원하는 비용입니다.
+              </div>
+            </details>
+  
+            <details>
+              <summary>
+                교육 콘텐츠는 어떤 주제든 제작 가능한가요?
+                <span>+</span>
+              </summary>
+              <div class="ans"><
+                AI·ESG·인권·개인정보·직무 등 원하시는 주제로 제작 가능합니다.<br>
+                사내 업종/직무 특성에 맞춰 난이도와 사례를 조정해 <b>30차시</b>로 구성합니다.
+              </div>
+            </details>
+  
+            <details>
+              <summary>
+                산업안전보건교육/관리감독자교육/법정교육을 한 페이지에서 다 들을 수 있나요?
+                <span>+</span>
+              </summary>
+              <div class="ans">
+                네. 포털 내에서 과정 운영을 통합합니다.<br>
+                단, <b>집체/Zoom</b> 교육은 별도 일정으로 진행하게 됩니다.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+  
+   
+
+    <!-- 맨 아래 상담문의 섹션 -->
+    <section id="question" class="bottom-consultation-section">
+      <div class="container">
+        <div class="consultation-container">
+          <div class="consultation-right">
+            <div class="consult-form-container">
+              <h3>무료 상담 신청하기</h3>
+              <form id="bottomConsultForm">
+                <div class="consult-form-row">
+                  <div class="consult-form-group">
+                    <label>1. 기업명 *</label>
+                    <input type="text" name="company_name" required placeholder="기업명을 입력해주세요">
+                  </div>
+                </div>
+                <div class="consult-form-row">
+                  <div class="consult-form-group">
+                    <label>2. 연락처 *</label>
+                    <div class="phone-input-group">
+                      <input type="text" id="phone1" class="phone-part" placeholder="010" maxlength="3" required>
+                      <span>-</span>
+                      <input type="text" id="phone2" class="phone-part" placeholder="앞자리" maxlength="4" required>
+                      <span>-</span>
+                      <input type="text" id="phone3" class="phone-part" placeholder="뒷자리" maxlength="4" required>
+                    </div>
+                    <input type="hidden" name="contact_number" id="hiddenContactNumber">
+                  </div>
+                  <div class="consult-form-group">
+                    <label>3. 담당자 성함 *</label>
+                    <input type="text" name="manager_name" required placeholder="담당자 본인 성함을 입력해주세요">
+                  </div>
+                </div>
+                <div class="consult-form-row">
+                  <div class="consult-form-group">
+                    <label>4. 미팅 날짜 및 시간 *</label>
+                    <div class="date-time-group">
+                      <input type="date" name="meeting_date" required>
+                      <select name="meeting_time" required>
+                        <option value="">시간 선택</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="consult-form-row">
+                  <div class="consult-form-group full-width">
+                    <label>5. 문의사항</label>
+                    <textarea name="inquiry_content" rows="4" placeholder="문의하실 내용을 입력하세요 (선택사항)"></textarea>
+                  </div>
+                </div>
+                <div class="consult-checkbox">
+                  <label>
+                    <input type="checkbox" id="bottomPrivacyConsent" required>
+                    <span>[필수] 개인정보수집동의</span>
+                  </label>
+                  <button type="button" class="privacy-detail-btn" onclick="togglePrivacyDetail()">자세히보기</button>
+                </div>
+                
+                <button type="submit" class="consult-submit-btn">
+                  <span class="submit-text">문의하기</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 하단 고정 버튼 -->
+    <div class="bottom-bar">
+      <div class="contact-info">
+        <a href="https://open.kakao.com/o/sgNiRb8h" class="phone-link">
+          <img src="{{ url_for('static', filename='image/KakaoTalk_logo.svg') }}" alt="카톡 상담하기" class="kakao-logo">
+          <span>카톡 상담하기</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 왼쪽 탭 버튼 (팝업 닫혔을 때 표시) -->
+    <button class="popup-tab-btn" id="popupTab" onclick="openConsultPopup()" style="display: none;">
+      <span>상담<br>문의</span>
+    </button>
+
+    <!-- 사이드 팝업 상담 폼 -->
+    <div class="consult-popup-overlay" id="consultPopup">
+      <div class="consult-popup">
+        <div class="popup-header">
+          <h2>빠른상담문의</h2>
+          <button class="popup-close" onclick="closeConsultPopup()">&times;</button>
+        </div>
+        
+        <div class="popup-body">
+          <form id="consultForm" onsubmit="handleConsultSubmit(event)">
+            <div class="popup-form-group">
+              <label for="companyName">1. 기업명 <span class="required">*</span></label>
+              <input type="text" id="companyName" name="company_name" required placeholder="기업명을 입력하세요">
+            </div>
+            
+            <div class="popup-form-group">
+              <label for="contactNumber">2. 연락처 <span class="required">*</span></label>
+              <p>이메일을 작성해주셔도 됩니다.</p>
+              <input type="text" id="contactNumber" name="contact_number" required placeholder="010-0000-0000">
+            </div>
+            
+            <div class="popup-form-group">
+              <label for="managerName">3. 담당자 성함 <span class="required">*</span></label>
+              <input type="text" id="managerName" name="manager_name" required placeholder="담당자 성함을 입력하세요">
+            </div>
+            
+            <div class="popup-form-group">
+              <label for="meetingDate">4. 미팅 날짜 및 시간 <span class="required">*</span></label>
+              <div class="date-time-group">
+                <input type="date" id="meetingDate" name="meeting_date" required>
+                <select id="meetingTime" name="meeting_time" required>
+                  <option value="">시간 선택</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="12:00">12:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="popup-form-group">
+              <label for="inquiryContent">5. 문의사항</label>
+              <textarea id="inquiryContent" name="inquiry_content" rows="4" placeholder="문의하실 내용을 입력하세요 (선택사항)"></textarea>
+            </div>
+            
+            <div class="popup-privacy">
+              <label class="privacy-checkbox-label">
+                <input type="checkbox" id="privacyConsent" required>
+                <span>[필수] 개인정보수집동의</span>
+              </label>
+              <button type="button" class="privacy-detail-btn" onclick="togglePrivacyDetail()">자세히보기</button>
+            </div>
+            
+            <button type="submit" class="popup-submit-btn">
+              <span class="submit-text">문의하기</span>
+              <span class="submit-loading" style="display: none;">전송중...</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- 개인정보 동의 팝업 -->
+    <div class="privacy-popup-overlay" id="privacyPopup" onclick="if(event.target === this) closePrivacyPopup()">
+      <div class="privacy-popup" onclick="event.stopPropagation()">
+        <div class="privacy-popup-header">
+          <h3>개인정보 수집 및 이용 동의</h3>
+          <button class="privacy-popup-close" onclick="closePrivacyPopup()">&times;</button>
+        </div>
+        <div class="privacy-popup-content">
+          <p><strong>수집하는 개인정보 항목</strong></p>
+          <p>기업명, 연락처, 담당자명, 문의내용</p>
+          
+          <p><strong>개인정보 수집 및 이용목적</strong></p>
+          <p>교육 상담 및 문의 응대</p>
+          
+          <p><strong>개인정보 보유 및 이용기간</strong></p>
+          <p>문의 접수 후 1년</p>
+          
+          <p><strong>동의 거부 권리</strong></p>
+          <p>동의를 거부할 권리가 있으며, 거부 시 상담 서비스 이용이 제한됩니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  
+   
+  </body>
+  </html>
