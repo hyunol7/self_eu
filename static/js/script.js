@@ -1,5 +1,5 @@
 // 구글 시트 웹 앱 URL (Apps Script 배포 후 여기에 URL을 입력하세요)
-const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyRE-HcBfCtfL7aNz_8Q8r6dKUkDTWtR37WnAnq71JahhG9QSuXcKfNxH-29yCdAkOS/exec';
+const GOOGLE_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1RHwI4aLpunqwtbp8kW19Kt2IvkKPREjJkPPfAO9WTKw/edit?usp=sharing';
 
 // FAQ 토글
 function toggleFaq(index) {
