@@ -1,5 +1,6 @@
 // 구글 시트 웹 앱 URL (Apps Script 배포 후 여기에 URL을 입력하세요)
-const GOOGLE_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1RHwI4aLpunqwtbp8kW19Kt2IvkKPREjJkPPfAO9WTKw/edit?usp=sharing';
+// 이 URL은 Google Apps Script에서 "웹 앱으로 배포" 후 받은 URL입니다
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyLEuw7acQZGvU6IwMJEXGsipW-OROeCG8CismSBsFO-NxcIkikf472iOejf-qEIxRg7w/exec';
 
 // FAQ 토글
 function toggleFaq(index) {
@@ -116,15 +117,16 @@ async function handleConsultSubmit(event) {
                 sheetData.append('company_name', formData.company_name);
                 sheetData.append('contact_number', formData.contact_number);
                 sheetData.append('manager_name', formData.manager_name);
-                sheetData.append('meeting_date', formData.meeting_date);
-                sheetData.append('inquiry_content', formData.inquiry_content);
-                sheetData.append('timestamp', new Date().toLocaleString('ko-KR'));
+                sheetData.append('meeting_date', formData.meeting_date || '');
+                sheetData.append('inquiry_content', formData.inquiry_content || '');
+                sheetData.append('timestamp', new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }));
                 
                 await fetch(GOOGLE_SHEET_URL, {
                     method: 'POST',
                     mode: 'no-cors',
                     body: sheetData
                 });
+                console.log('구글 시트 저장 완료');
             } catch (sheetError) {
                 console.error('구글 시트 저장 실패 (DB에는 저장됨):', sheetError);
             }
@@ -337,15 +339,16 @@ async function handleBottomConsultSubmit(event) {
                 sheetData.append('company_name', formData.company_name);
                 sheetData.append('contact_number', formData.contact_number);
                 sheetData.append('manager_name', formData.manager_name);
-                sheetData.append('meeting_date', formData.meeting_date);
-                sheetData.append('inquiry_content', formData.inquiry_content);
-                sheetData.append('timestamp', new Date().toLocaleString('ko-KR'));
+                sheetData.append('meeting_date', formData.meeting_date || '');
+                sheetData.append('inquiry_content', formData.inquiry_content || '');
+                sheetData.append('timestamp', new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }));
                 
                 await fetch(GOOGLE_SHEET_URL, {
                     method: 'POST',
                     mode: 'no-cors',
                     body: sheetData
                 });
+                console.log('구글 시트 저장 완료');
             } catch (sheetError) {
                 console.error('구글 시트 저장 실패 (DB에는 저장됨):', sheetError);
             }

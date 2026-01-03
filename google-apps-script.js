@@ -1,10 +1,16 @@
 // 이 코드를 Google Apps Script 에디터에 붙여넣으세요
-// https://docs.google.com/spreadsheets/d/1NjxwF1MSxgZHwy7YjyqdhEM2SOwjPUw9ACv2M9lRIoM/edit
+// 스프레드시트: https://docs.google.com/spreadsheets/d/1RHwI4aLpunqwtbp8kW19Kt2IvkKPREjJkPPfAO9WTKw/edit
 
 function doPost(e) {
   try {
     // 스프레드시트 연결
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var spreadsheet = SpreadsheetApp.openById('1RHwI4aLpunqwtbp8kW19Kt2IvkKPREjJkPPfAO9WTKw');
+    var sheet = spreadsheet.getActiveSheet();
+    
+    // 헤더가 없으면 추가
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow(['접수시간', '기업명', '연락처', '담당자 성함', '미팅 날짜 및 시간', '문의사항']);
+    }
     
     // 폼 데이터 파싱
     var params = e.parameter;
@@ -12,14 +18,16 @@ function doPost(e) {
     var companyName = params.company_name || '';
     var contactNumber = params.contact_number || '';
     var managerName = params.manager_name || '';
+    var meetingDate = params.meeting_date || '';
     var inquiryContent = params.inquiry_content || '';
     
-    // 시트에 데이터 추가 (2번째 행부터 - 1번 행은 헤더)
+    // 시트에 데이터 추가
     sheet.appendRow([
       timestamp,
       companyName,
       contactNumber,
       managerName,
+      meetingDate,
       inquiryContent
     ]);
     
@@ -55,12 +63,20 @@ function doGet(e) {
 
 // 테스트 함수 (Apps Script 에디터에서 실행 가능)
 function testInsert() {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var spreadsheet = SpreadsheetApp.openById('1RHwI4aLpunqwtbp8kW19Kt2IvkKPREjJkPPfAO9WTKw');
+  var sheet = spreadsheet.getActiveSheet();
+  
+  // 헤더가 없으면 추가
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(['접수시간', '기업명', '연락처', '담당자 성함', '미팅 날짜 및 시간', '문의사항']);
+  }
+  
   sheet.appendRow([
     new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }),
     '테스트 회사',
     '010-1234-5678',
     '홍길동',
+    '2025-01-15 14:00',
     '테스트 문의입니다.'
   ]);
   Logger.log('테스트 데이터가 추가되었습니다.');
