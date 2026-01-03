@@ -114,17 +114,29 @@ async function handleConsultSubmit(event) {
         if (GOOGLE_SHEET_URL && GOOGLE_SHEET_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
             try {
                 const sheetData = new URLSearchParams();
-                sheetData.append('company_name', formData.company_name);
-                sheetData.append('contact_number', formData.contact_number);
-                sheetData.append('manager_name', formData.manager_name);
+                sheetData.append('company_name', formData.company_name || '');
+                sheetData.append('contact_number', formData.contact_number || '');
+                sheetData.append('manager_name', formData.manager_name || '');
                 sheetData.append('meeting_date', formData.meeting_date || '');
                 sheetData.append('inquiry_content', formData.inquiry_content || '');
                 sheetData.append('timestamp', new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }));
                 
+                // 디버깅: 전송되는 데이터 확인
+                console.log('구글 시트로 전송하는 데이터:', {
+                    company_name: formData.company_name,
+                    contact_number: formData.contact_number,
+                    manager_name: formData.manager_name,
+                    meeting_date: formData.meeting_date,
+                    inquiry_content: formData.inquiry_content
+                });
+                
                 await fetch(GOOGLE_SHEET_URL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    body: sheetData
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: sheetData.toString()
                 });
                 console.log('구글 시트 저장 완료');
             } catch (sheetError) {
@@ -336,17 +348,29 @@ async function handleBottomConsultSubmit(event) {
         if (GOOGLE_SHEET_URL && GOOGLE_SHEET_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
             try {
                 const sheetData = new URLSearchParams();
-                sheetData.append('company_name', formData.company_name);
-                sheetData.append('contact_number', formData.contact_number);
-                sheetData.append('manager_name', formData.manager_name);
+                sheetData.append('company_name', formData.company_name || '');
+                sheetData.append('contact_number', formData.contact_number || '');
+                sheetData.append('manager_name', formData.manager_name || '');
                 sheetData.append('meeting_date', formData.meeting_date || '');
                 sheetData.append('inquiry_content', formData.inquiry_content || '');
                 sheetData.append('timestamp', new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }));
                 
+                // 디버깅: 전송되는 데이터 확인
+                console.log('구글 시트로 전송하는 데이터:', {
+                    company_name: formData.company_name,
+                    contact_number: formData.contact_number,
+                    manager_name: formData.manager_name,
+                    meeting_date: formData.meeting_date,
+                    inquiry_content: formData.inquiry_content
+                });
+                
                 await fetch(GOOGLE_SHEET_URL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    body: sheetData
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: sheetData.toString()
                 });
                 console.log('구글 시트 저장 완료');
             } catch (sheetError) {
